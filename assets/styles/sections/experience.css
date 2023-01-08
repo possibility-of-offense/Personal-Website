@@ -1,0 +1,123 @@
+#experience {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 2.5rem;
+}
+
+#experience::after {
+  content: "";
+  position: absolute;
+  width: 225%;
+  height: 1px;
+  top: 0;
+  bottom: 0;
+  background-color: #222020;
+  transform-origin: top left;
+  transform: rotate(45deg);
+}
+
+#experience::before {
+  content: "";
+  position: absolute;
+  width: 225%;
+  height: 1px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #222020;
+  transform-origin: top right;
+  transform: rotate(-25deg);
+}
+
+.experience__grid {
+  max-width: 950px;
+  width: 95%;
+  padding-top: 12%;
+  margin: 0 auto;
+}
+
+.experience__grid * {
+  position: relative;
+  z-index: 2;
+}
+
+.experience__heading h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+@media (orientation: landscape) {
+  .experience__heading h2 {
+    text-align: left;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1023px) {
+  .experience__grid {
+    padding-top: 7%;
+    padding-left: 1rem;
+  }
+  .experience__heading h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .experience__grid {
+    padding-top: 6%;
+  }
+
+  .experience__heading h2 {
+    font-size: 5rem;
+  }
+}
+
+.experience__grid--list > div {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgb(158, 158, 158);
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.experience__grid--list > div:first-child {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.experience__grid--list > div:last-child {
+  transform: translateX(100%);
+  opacity: 0;
+  border: none;
+}
+
+.experience__grid--list > div .duration,
+.experience__grid--list > div .employer {
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
+.experience__grid--list > div .description {
+  color: #999;
+}
+
+.experience__grid--list > div .description li {
+  padding: 4px 0;
+  font-size: 14px;
+}
+
+.experience-bottom-right-corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background-color: #0f0e0e;
+  border-radius: 50%;
+  transform: translate(50%, 50%);
+}

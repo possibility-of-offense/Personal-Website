@@ -1,0 +1,12 @@
+.section {
+  min-height: 110vh;
+}
+
+.d-none {
+  display: none;
+}
+
+.no-cursor {
+  cursor: none;
+  pointer-events: none;
+}
