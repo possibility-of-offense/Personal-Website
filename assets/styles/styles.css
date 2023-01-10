@@ -52,11 +52,11 @@ body {
 .navigation-menu {
   opacity: 0;
   background-color: #fff;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
+  top: 10px;
+  right: 10px;
   position: fixed;
-  top: 2rem;
-  right: 2rem;
   border-radius: 50%;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.1);
@@ -66,6 +66,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (orientation: landscape) {
+  .navigation-menu {
+    height: 5rem;
+    width: 5rem;
+    top: 2rem;
+    right: 2%;
+  }
 }
 
 .navigation-menu .navigation__icon {

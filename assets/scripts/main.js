@@ -199,15 +199,22 @@ document
   )
   .forEach((el) => {
     el.addEventListener("mouseenter", (e) => {
-      const tl = gsap.timeline();
+      const { target } = e;
 
-      tl.to(el.querySelectorAll("li"), {
-        opacity: 1,
-        x: 0,
-        stagger: {
-          amount: 1,
-        },
-      });
+      if (
+        target.classList.contains("more-info") ||
+        target.querySelector(".more-info")
+      ) {
+        const tl = gsap.timeline();
+
+        tl.to(el.querySelectorAll("li"), {
+          opacity: 1,
+          x: 0,
+          stagger: {
+            amount: 1,
+          },
+        });
+      }
     });
   });
 
