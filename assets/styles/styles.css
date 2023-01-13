@@ -7,10 +7,6 @@
 @import "sections/projects.css";
 @import "sections/contact.css";
 
-body {
-  overflow-y: hidden;
-}
-
 /* Modal */
 .modal {
   position: fixed;
